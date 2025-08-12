@@ -1,17 +1,24 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Phone, MapPin, ChevronDown } from "lucide-react";
+import heroVideo from "../assets/hero.mp4";
 import "./Hero.css";
 
 const Hero: React.FC = () => {
   return (
     <section id="home" className="hero">
       <div className="hero-video-container">
-        <video className="hero-video" autoPlay loop muted playsInline>
-          <source
-            src="https://artxcryogen.com/wp-content/uploads/2024/04/frozen-abstract-animated-background-SBV-309303559-HD.mp4"
-            type="video/mp4"
-          />
+        <video
+          className="hero-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/path-to-poster-image.jpg"
+        >
+          <source src={heroVideo} type="video/quicktime" />
+          <source src={heroVideo} type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
         <div className="hero-overlay"></div>
       </div>
@@ -62,12 +69,12 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <a href="tel:5015163128" className="hero-cta-primary">
-            <Phone size={20} />
-            Call 501-516-3128
+            <Phone size={18} />
+            <span>Call 501-516-3128</span>
           </a>
           <a href="#contact" className="hero-cta-secondary">
-            <MapPin size={20} />
-            Visit Our Clinic
+            <MapPin size={18} />
+            <span>Visit Our Clinic</span>
           </a>
         </motion.div>
 
@@ -79,11 +86,11 @@ const Hero: React.FC = () => {
         >
           <div className="hero-feature">
             <span className="feature-number">7,000+</span>
-            <span className="feature-text">Treatments Performed</span>
+            <span className="feature-text">Treatments</span>
           </div>
           <div className="hero-feature">
             <span className="feature-number">15 min</span>
-            <span className="feature-text">Quick Sessions</span>
+            <span className="feature-text">Sessions</span>
           </div>
           <div className="hero-feature">
             <span className="feature-number">100%</span>

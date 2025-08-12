@@ -272,3 +272,55 @@
     grid-template-columns: 1fr;
   }
 }
+/* Mobile Optimizations for Services */
+@media (max-width: 768px) {
+  .services {
+    padding: 4rem 1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .service-card.popular {
+    transform: none;
+  }
+
+  .service-price {
+    font-size: 2rem;
+  }
+
+  .process-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .insurance-info {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .service-features {
+    font-size: 0.9rem;
+  }
+
+  .process-section {
+    padding: 1.5rem 1rem;
+  }
+}
